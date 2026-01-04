@@ -57,6 +57,12 @@ const Login = () => {
       sessionStorage.setItem("authToken", data.data.token);
       sessionStorage.setItem("authUser", JSON.stringify(data.data.usuario));
 
+      // Se for admin, salvar também como adminToken para páginas administrativas
+      if (data.data.usuario.tipo === 'admin') {
+        sessionStorage.setItem("adminToken", data.data.token);
+        sessionStorage.setItem("adminUser", JSON.stringify(data.data.usuario));
+      }
+
       toast.success("Login realizado com sucesso!");
 
       // Redirecionar baseado no tipo de usuário

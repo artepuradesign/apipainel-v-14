@@ -173,8 +173,8 @@ const Produto = () => {
       <main className="container py-6 lg:py-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           
-          {/* Left Column - Images */}
-          <div className="space-y-4">
+          {/* Left Column - Images (order-2 on mobile, order-1 on lg) */}
+          <div className="space-y-4 order-2 lg:order-1">
             {/* Main Image */}
             <div className="relative aspect-square bg-background flex items-center justify-center rounded-lg overflow-hidden">
               <img
@@ -228,8 +228,8 @@ const Produto = () => {
             )}
           </div>
 
-          {/* Right Column - Product Info */}
-          <div className="space-y-5">
+          {/* Right Column - Product Info (order-1 on mobile, order-2 on lg) */}
+          <div className="space-y-5 order-1 lg:order-2">
             {/* Title Row */}
             <div className="flex items-start justify-between gap-4">
               <h1 className="text-xl lg:text-2xl font-semibold text-foreground leading-tight">
