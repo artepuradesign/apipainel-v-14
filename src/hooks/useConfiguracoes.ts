@@ -9,6 +9,7 @@ export interface Configuracoes {
   frete_gratis_acima: string;
   parcelas_maximo: string;
   parcelas_sem_juros: string;
+  cep: string;
 }
 
 const defaultConfig: Configuracoes = {
@@ -19,6 +20,7 @@ const defaultConfig: Configuracoes = {
   frete_gratis_acima: '500',
   parcelas_maximo: '12',
   parcelas_sem_juros: '3',
+  cep: '',
 };
 
 export const fetchConfiguracoes = async (): Promise<Configuracoes> => {
